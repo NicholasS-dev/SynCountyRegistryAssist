@@ -1,0 +1,145 @@
+/* Intro Screen */
+.intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-wood);
+    background-image: repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.02) 0px,
+            rgba(255, 255, 255, 0.02) 1px,
+            transparent 1px,
+            transparent 10px),
+        linear-gradient(to bottom, #2c1e14, #1a110d);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 0.8s ease-out;
+}
+
+.intro-content {
+    background-color: var(--paper-bg);
+    padding: 3rem;
+    border: 3px double var(--ink-primary);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    max-width: 800px;
+    width: 95%;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.intro-content::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--ink-red);
+    pointer-events: none;
+}
+
+.intro-header {
+    margin-bottom: 2rem;
+}
+
+.intro-badge {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    color: var(--gold-accent);
+}
+
+.intro-content h1 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--ink-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.intro-content p {
+    font-family: var(--font-text);
+    font-size: 1.1rem;
+    color: var(--ink-secondary);
+}
+
+.intro-divider {
+    border: 0;
+    border-top: 1px dashed var(--ink-primary);
+    margin: 2rem 0;
+    opacity: 0.5;
+}
+
+.intro-section {
+    margin-bottom: 2.5rem;
+}
+
+.intro-section h2 {
+    font-family: var(--font-display);
+    color: var(--ink-red);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.feature-item h3 {
+    font-family: var(--font-display);
+    color: var(--ink-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--ink-old-paper);
+    padding-bottom: 0.2rem;
+}
+
+.feature-item p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    font-style: normal;
+}
+
+.intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.enter-btn {
+    flex: 1 1 200px;
+    background: var(--ink-primary);
+    color: var(--paper-bg);
+    border: none;
+    padding: 1rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.enter-btn:hover {
+    background: transparent;
+    color: var(--ink-primary);
+    border-color: var(--ink-primary);
+    transform: scale(1.05);
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
