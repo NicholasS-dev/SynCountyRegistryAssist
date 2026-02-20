@@ -461,11 +461,15 @@ async function copyBriefingNotes() {
 
     let finalNotes = notes;
     if (includeStandardNotes && includeStandardNotes.checked) {
-        const standardNotes = `Briefings start 15 minutes before storm show up on time, This is very important!
+        const standardNotes = `Briefings start 15 minutes before storm show up on time.
+It is not your job to take on verbal abuse! If that is happening, clip it, ship it, and get away from the abuse. You don't deserve to be screamed at, so don't let them.
+Prioritize yourself. Take breaks. If you need an LOA, take one! They are there for a reason.
+Watch your numbers on alerts the max is 7.
+Senior Deputy+ Take Shadows.
 
-Check out (It's got region ordinances organized and lots of other good tools) https://samuele1000.github.io/SynCountySheriffsOffice/
+Check out (It's got region ordinances organized and lots of other good tools) https://nicholass-dev.github.io/SynCountyRegistryAssist/
 
-Senior Deputy+ Keep taking shadow.`;
+`;
 
         if (finalNotes) {
             finalNotes += '\n\n' + standardNotes;
